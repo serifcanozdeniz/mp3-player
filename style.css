@@ -9,20 +9,19 @@
 body{
     height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background-color: #FFFFFF;
-    background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+    background-color: green;
 }
 .music-player{
     font-size: 16px;
     width: 80vw;
     max-width: 25em;
-    background-color: aliceblue;
+    background-color: white;
     padding: 3em 2em;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    box-shadow: 0 0 10px rgba(31, 31, 224, 0.7);
+    box-shadow: 0 0 10px green;
     border-radius: 8px;
 }
 img{
@@ -30,7 +29,7 @@ img{
     margin-top: 1.25em;
     border-radius: 1em;
     max-height: 300px;
-    box-shadow: 0 0 10px rgba(31, 31, 224, 0.7);
+    box-shadow: 0 0 10px green;
 }
 #playlist{
     float: right;
@@ -64,8 +63,9 @@ img{
 .player-options button i{
     cursor: pointer;
 }
-#play, #pause{
-    background-color: rgb(10, 200, 100);
+#play,
+#pause{
+    background-color: green;
     height: 2.5em;
     width: 2.5em;
     font-size: 1.8em;
@@ -97,7 +97,7 @@ img{
     left: 0;
     top: 0;
     display: inline-block;
-    background-color: rgb(10, 200, 100);
+    background-color: green;
     width: 10%;
     height: 100%;
     border-radius: 2em;
@@ -108,18 +108,17 @@ img{
     justify-content: space-between;
 }
 #playlist-container{
-    background-color: rgba(98, 132, 255, 0.9);
+    background-color: green;
     position: absolute;
     width: 90%;
     height: 90%;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    box-shadow: 0 0 10px rgba(50, 100, 150, 0.9);
+    box-shadow: 0 0 10px green;
     overflow-x: hidden;
     scroll-behavior: smooth;
     border-radius: 8px;
-    transition: .5s;
 }
 #close-button{
     background-color: transparent;
@@ -128,6 +127,11 @@ img{
     width: 2em;
     margin-left: 90%;
     font-size: 20px;
+    color: white;
+}
+.playlist-image-container{
+    display: flex;
+    align-items: center;
 }
 li{
     display: flex;
@@ -135,18 +139,17 @@ li{
     margin: 1rem 0;
     cursor: pointer;
 }
-.playlist-song-details{
-    margin: 1rem;
+.playlist-song-details span{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
 }
 .playlist-image-container{
     width: 4em;
     margin-left: 10px;
 }
-.playlist-song-details > span{
-    display: block;
-}
 #playlist-song-artist-album{
-    color: gray;
+    color: white;
 }
 button.active i{
     color: green;

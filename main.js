@@ -242,7 +242,7 @@ const initializePlayList = () => {
         <div class="playlist-image-container">
         <img src="${songList[i].image}"
         </div>
-        <div class=playlist-song-details">
+        <div class="playlist-song-details">
         <span id="playlist-song-name">
         ${songList[i].name}
         </span>
