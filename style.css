@@ -138,6 +138,10 @@ li{
     align-items: center;
     margin: 1rem 0;
     cursor: pointer;
+    transition: .5s;
+}
+li:hover{
+    background-color: rgba(215, 190, 190, 0.432);
 }
 .playlist-song-details span{
     display: flex;
