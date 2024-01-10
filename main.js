@@ -103,9 +103,9 @@ const songList = [
 //zaman formatı ayarlama
 const timeFormatter = (timeInput) => {
     let minute = Math.floor(timeInput / 60)
-    minute = minute < 10 ? "0" + minute : minute
+    minute = minute < 11 ? "0" + minute : minute
     let second = Math.floor(timeInput % 60)
-    second = second < 10 ? "0" + second : second
+    second = second < 11 ? "0" + second : second
     return `${minute}: ${second}`
 }
 
