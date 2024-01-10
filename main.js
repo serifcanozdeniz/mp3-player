@@ -91,22 +91,28 @@ const songList = [
         link: "music/ay tenli kadın.mp3",
         artist: "Ufuk Beydemir",
         image: "images/ufukbeydemir.jpeg"
+    },
+    {
+        name: "Şansım Olsun",
+        link: "music/derya-ulug-sansim-olsun.mp3",
+        artist: "Derya Uluğ",
+        image: "images/deryaulug.jpeg"
     }
 ]
 
 //zaman formatı ayarlama
 const timeFormatter = (timeInput) => {
-    let minute = Math.floor(timeInput/60)
-    minute = minute < 10 ? "0"+minute : minute
+    let minute = Math.floor(timeInput / 60)
+    minute = minute < 10 ? "0" + minute : minute
     let second = Math.floor(timeInput % 60)
-    second = second < 10 ? "0"+second : second
+    second = second < 10 ? "0" + second : second
     return `${minute}: ${second}`
 }
 
 
 
 //şarkıyı çalma
-const playAudio = () =>{
+const playAudio = () => {
 
     console.log("playAudio")
     audio.play()
@@ -129,11 +135,11 @@ const playAudio = () =>{
 
 const setSong = (arrayIndex) => {
     if (loop == true && isShuffleActive == true) {
-        arrayIndex = Math.floor(Math.random()*100)%10
+        arrayIndex = Math.floor(Math.random() * 100) % 10
     }
-    console.log(arrayIndex  + isShuffleActive)
+    console.log(arrayIndex + isShuffleActive)
 
-    let {name,link,artist,image} = songList[arrayIndex]
+    let { name, link, artist, image } = songList[arrayIndex]
     audio.src = link
     songName.innerHTML = name
     songArtist.innerHTML = artist
@@ -144,18 +150,18 @@ const setSong = (arrayIndex) => {
         maxDuration.innerText = timeFormatter(audio.duration)
     }
     playListContainer.classList.add("hide")
-    
+
     playAudio()
 }
 
 //sıradakini çal
 const nextSong = () => {
     if (loop) {
-        
+
         if (index == (songList.length - 1)) {
             index = 0
         } else {
-            index+=1
+            index += 1
         }
         setSong(index)
     } else {
@@ -164,7 +170,7 @@ const nextSong = () => {
     }
 }
 
-playListButton.addEventListener('click', () =>{
+playListButton.addEventListener('click', () => {
     playListContainer.classList.remove('hide')
 })
 
@@ -180,7 +186,7 @@ const pauseAudio = () => {
 
 setInterval(() => {
     currentTimeRef.innerHTML = timeFormatter(audio.currentTime)
-    currentProgress.style.width = (audio.currentTime/audio.duration.toFixed(3))* 100 + "%"
+    currentProgress.style.width = (audio.currentTime / audio.duration.toFixed(3)) * 100 + "%"
     //
 }, 1000);
 
@@ -188,7 +194,7 @@ progressBar.addEventListener('click', (event) => {
     let coordStart = progressBar.getBoundingClientRect().left
 
     let coordEnd = event.clientX
-    let progress = (coordEnd-coordStart) / progressBar.offsetWidth
+    let progress = (coordEnd - coordStart) / progressBar.offsetWidth
 
     currentProgress.style.width = progressBar * 100 + "%"
 
@@ -200,7 +206,7 @@ progressBar.addEventListener('click', (event) => {
 
 const previousSong = () => {
     if (index > 0) {
-        index-=1
+        index -= 1
     } else {
         index = songList.length - 1
     }
@@ -208,7 +214,7 @@ const previousSong = () => {
     playAudio()
 }
 
-repeatButton.addEventListener('click',()=>{
+repeatButton.addEventListener('click', () => {
     if (repeatButton.classList.contains('active')) {
         repeatButton.classList.remove('active')
         audio.loop = false

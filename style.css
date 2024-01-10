@@ -1,165 +1,167 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
 }
-body{
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    background-color: green;
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: green;
 }
-.music-player{
-    font-size: 16px;
-    width: 80vw;
-    max-width: 25em;
-    background-color: white;
-    padding: 3em 2em;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    box-shadow: 0 0 10px green;
-    border-radius: 8px;
+.music-player {
+  font-size: 16px;
+  width: 80vw;
+  max-width: 25em;
+  background-color: white;
+  padding: 3em 2em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px green;
+  border-radius: 8px;
 }
-img{
-    width: 100%;
-    margin-top: 1.25em;
-    border-radius: 1em;
-    max-height: 300px;
-    box-shadow: 0 0 10px green;
+img {
+  width: 100%;
+  margin-top: 1.25em;
+  border-radius: 1em;
+  max-height: 300px;
+  box-shadow: 0 0 10px green;
 }
-#playlist{
-    float: right;
-    background-color: transparent;
-    border: none;
+#playlist {
+  float: right;
+  background-color: transparent;
+  border: none;
 }
-.song-details{
-    text-align: center;
+.song-details {
+  text-align: center;
 }
-.song-details #song-name{
-    font-size: 1.3em;
-    font-weight: 600;
-    letter-spacing: .3px;
+.song-details #song-name {
+  font-size: 1.3em;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
-.song-details #song-artist{
-    font-size: .8em;
-}
-
-.player-options{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0 1.25rem;
-    margin: 1.25rem 0 0.6em 0;
-}
-.player-options button{
-    border: none;
-    background-color: transparent;
+.song-details #song-artist {
+  font-size: 0.8em;
 }
 
-.player-options button i{
-    cursor: pointer;
+.player-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 1.25rem;
+  margin: 1.25rem 0 0.6em 0;
+}
+.player-options button {
+  border: none;
+  background-color: transparent;
+}
+
+.player-options button i {
+  cursor: pointer;
 }
 #play,
-#pause{
-    background-color: green;
-    height: 2.5em;
-    width: 2.5em;
-    font-size: 1.8em;
-    color: white;
-    border-radius: 50%;
+#pause {
+  background-color: green;
+  height: 2.5em;
+  width: 2.5em;
+  font-size: 1.8em;
+  color: white;
+  border-radius: 50%;
 }
-#prev, #next{
-    color: black;
-    font-size: 1.4em;
+#prev,
+#next {
+  color: black;
+  font-size: 1.4em;
 }
-#shuffle, #repeat{
-    color: rgb(100, 100, 100);
-    font-size: 1em;
+#shuffle,
+#repeat {
+  color: rgb(100, 100, 100);
+  font-size: 1em;
 }
-.hide{
-    display: none;
+.hide {
+  display: none;
 }
-#progress-bar{
-    position: relative;
-    background-color: gray;
-    width: 100%;
-    height: .3em;
-    margin: 1em 0;
-    border-radius: 2em;
-    cursor: pointer;
+#progress-bar {
+  position: relative;
+  background-color: gray;
+  width: 100%;
+  height: 0.3em;
+  margin: 1em 0;
+  border-radius: 2em;
+  cursor: pointer;
 }
-#current-progress{
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: inline-block;
-    background-color: green;
-    width: 10%;
-    height: 100%;
-    border-radius: 2em;
+#current-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  background-color: green;
+  width: 10%;
+  height: 100%;
+  border-radius: 2em;
 }
-.time-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.time-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-#playlist-container{
-    background-color: green;
-    position: absolute;
-    width: 90%;
-    height: 90%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    box-shadow: 0 0 10px green;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    border-radius: 8px;
+#playlist-container {
+  background-color: green;
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px green;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  border-radius: 8px;
 }
-#close-button{
-    background-color: transparent;
-    border: none;
-    height: 2em;
-    width: 2em;
-    margin-left: 90%;
-    font-size: 20px;
-    color: white;
+#close-button {
+  background-color: transparent;
+  border: none;
+  height: 2em;
+  width: 2em;
+  margin-left: 90%;
+  font-size: 20px;
+  color: white;
 }
-.playlist-image-container{
-    display: flex;
-    align-items: center;
+.playlist-image-container {
+  display: flex;
+  align-items: center;
 }
-li{
-    display: flex;
-    align-items: center;
-    margin: 1rem 0;
-    cursor: pointer;
-    transition: .5s;
+li {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: 0.5s;
 }
-li:hover{
-    background-color: rgba(215, 190, 190, 0.432);
+li:hover {
+  background-color: rgba(215, 190, 190, 0.432);
 }
-.playlist-song-details span{
-    display: flex;
-    align-items: center;
-    margin: 0 10px;
+.playlist-song-details span {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
 }
-.playlist-image-container{
-    width: 4em;
-    margin-left: 10px;
+.playlist-image-container {
+  width: 4em;
+  margin-left: 10px;
 }
-#playlist-song-artist-album{
-    color: white;
+#playlist-song-artist-album {
+  color: white;
 }
-button.active i{
-    color: green;
+button.active i {
+  color: green;
 }
-@media (max-width:576px) {
-    .music-player{
-        font-size: 14px;
-    }
+@media (max-width: 576px) {
+  .music-player {
+    font-size: 14px;
+  }
 }
