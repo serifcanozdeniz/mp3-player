@@ -92,20 +92,14 @@ const songList = [
         artist: "Ufuk Beydemir",
         image: "images/ufukbeydemir.jpeg"
     },
-    {
-        name: "Şansım Olsun",
-        link: "music/derya-ulug-sansim-olsun.mp3",
-        artist: "Derya Uluğ",
-        image: "images/deryaulug.jpeg"
-    }
 ]
 
 //zaman formatı ayarlama
 const timeFormatter = (timeInput) => {
     let minute = Math.floor(timeInput / 60)
-    minute = minute < 11 ? "0" + minute : minute
+    minute = minute < 10 ? "0" + minute : minute
     let second = Math.floor(timeInput % 60)
-    second = second < 11 ? "0" + second : second
+    second = second < 10 ? "0" + second : second
     return `${minute}: ${second}`
 }
 
